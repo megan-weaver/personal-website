@@ -1,0 +1,225 @@
+
+/* GENERAL PAGE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+}
+
+
+/* SIDEBAR NAVIGATION */
+
+.sidebar {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    padding: 35px 25px;
+}
+
+.sidebar h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+.sidebar a {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: #ffffff;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    margin-left: 220px;
+    padding: 50px;
+}
+
+
+/* HOMEPAGE */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 30px;
+    min-height: 600px;
+}
+
+.home-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #777777;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.home h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.home h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: #777777;
+}
+
+
+/* HOMEPAGE PORTRAIT */
+
+.home-image {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.home-image img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background-color: #222222;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* OTHER PAGES */
+
+.page {
+    padding: 40px 30px;
+    max-width: 1000px;
+}
+
+.page h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.page h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-bottom: 2px solid #222222;
+}
+
+.project h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    color: #888888;
+    font-size: 13px;
+    border-top: 1px solid #dddddd;
+}
+
+
+/* MOBILE / SMALL SCREENS */
+
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 10px;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        padding: 8px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 15px;
+    }
+
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home-image {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
